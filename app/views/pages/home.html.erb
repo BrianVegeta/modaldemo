@@ -1,0 +1,49 @@
+<style type="text/css">
+#title {
+	margin: 0 auto;
+	width: 220px;
+	padding: 10px;
+}
+
+#modal {
+	background-color: red;
+	display: none;
+}
+#sub-btn {
+	background-color: #ffe148;
+	width: 220px;
+	height: 30px;
+}
+#simplemodal-container a.modalCloseImg {
+	background:url(/assets/x.png) no-repeat;
+	width:25px;
+	height:29px;
+	display:inline;
+	z-index:3200;
+	position:absolute;
+	top:-15px;
+	right:-18px;
+	cursor:pointer;
+}
+#simplemodal-overlay {
+	background-color: #000;
+	cursor: wait;
+}
+</style>
+
+<div id="title">
+	<h1>This is a demo!</h1>
+	<button id="sub-btn">click here for email subscription</button>
+</div>
+
+<div id="modal">
+	<script type="text/javascript" src="http://app.getresponse.com/view_webform.js?wid=8056405&u=UdHv"></script>
+</div>
+
+<script type="text/javascript" src="/assets/jquery.simplemodal.1.4.4.min.js"></script>
+<% title("Home Page") %>
+<script type="text/javascript">
+$('#sub-btn').click(function() {
+	$("#modal").modal();
+});
+</script>
